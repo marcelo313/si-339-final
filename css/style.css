@@ -56,16 +56,13 @@ body {
 
 
 .infodiv {
-    display: flex; /* This will create a flex container */
-    flex-wrap: wrap; /* This allows items to wrap to the next line if there isn't enough space */
-    justify-content: space-around; /* This will space out the items evenly */
-    align-items: stretch; /* This will make sure all items stretch to fill the container height */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* This creates exactly two columns */
+  gap: 10px; /* This adds space between the grid items */
+  align-items: stretch; /* This will make sure all items stretch to fill the container height */
 }
 
 .workout {
-  flex: 1; /* Allow flex items to grow and shrink as needed */
-  min-width: 300px/* Minimum width for each workout card */
-  max-width: 45%;/* Maximum width for a 2-column layout, accounting for gap */
   background-color: #FFFFFF; /* White background for content cards */
   border: none; /* Remove border */
   border-radius: 16px; /* Rounded corners for the cards */
@@ -80,10 +77,12 @@ body {
 }
 
 .workout img {
-    max-width: 100%; /* Ensures the image is never wider than its container */
-    height: auto;
-    border-bottom: 1px solid #EEEEEE; /* Add a subtle line to separate image from text */
+  width: 100%; /* Ensures the image is never wider than its container */
+  height: auto; /* Adjust the height automatically */
+  border-bottom: 1px solid #EEEEEE; /* Add a subtle line to separate image from text */
 }
+
+
 
 a.skip-to-content-link{
 background: white;
@@ -272,5 +271,4 @@ text-align: center;
   margin-right: auto; /* Automatically calculates right margin */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
 }
-
 
