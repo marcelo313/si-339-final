@@ -272,3 +272,83 @@ text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
 }
 
+
+
+/* Base styles outside of media queries will apply to all devices by default,
+   then we override them for smaller devices with media queries. */
+
+/* Mobile styles */
+@media screen and (max-width: 799px) {
+    body {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+    
+    header {
+        padding-top: 75px; /* Adjust header padding if needed */
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    nav li {
+        margin: 10px 0; /* Vertical margin for list items */
+    }
+
+    .infodiv {
+        display: block; /* Stack the workout cards vertically on small screens */
+    }
+
+    .workout {
+        width: 100%; /* Full width for small screens */
+        margin-bottom: 20px; /* Space between stacked workout cards */
+    }
+
+    .workout img {
+        width: 100%; /* Full width images on small screens */
+    }
+
+    h1, h2, h3 {
+        font-size: 24px; /* Adjust heading sizes for readability */
+    }
+}
+
+/* Tablet styles */
+@media screen and (min-width: 800px) and (max-width: 1199px) {
+    body {
+        font-size: 16px; /* Slightly larger font size for tablets */
+    }
+
+    header {
+        padding-top: 75px; /* Adjust header padding if needed */
+    }
+
+    nav ul {
+        display: flex; /* Use flexbox for horizontal alignment of nav items */
+        justify-content: center; /* Center the navigation items */
+    }
+
+    nav li {
+        margin: 0 20px; /* Horizontal margin for list items */
+    }
+
+    .infodiv {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns for tablet screens */
+        gap: 20px; /* Space between grid items */
+    }
+
+    .workout {
+        width: auto; /* Auto width to fit the grid layout */
+    }
+
+    .workout img {
+        width: 100%; /* Full width images within their cards */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    h1, h2, h3 {
+        font-size: 28px; /* Larger heading sizes for tablets */
+    }
+}
