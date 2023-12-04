@@ -90,8 +90,6 @@ left: 0;
 padding: 6px;
 position: absolute;
 top: -40px;
--webkit-transition: top 1s ease-out;
-transition: top 1s ease-out;
 z-index: 1;
 }
 
@@ -169,6 +167,7 @@ h2.quote {
 }
 .nav li {
   list-style: none;
+  padding:20px;
 
 }
 .nav a {
@@ -188,6 +187,7 @@ h2.quote {
 }
 .nav li a.active {
   background-color: #ffffff;
+  border: solid;
   font-style:oblique;
   text-transform: uppercase;
   letter-spacing: 2px;
