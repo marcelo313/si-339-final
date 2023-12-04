@@ -289,7 +289,6 @@ text-align: center;
 
     nav ul {
         display: block;
-        text-align: center;
     }
 
     nav li {
@@ -298,18 +297,27 @@ text-align: center;
 
     .infodiv {
         display: block; /* Stack the workout cards vertically on small screens */
+        padding: 0 15px;
     }
 
     .workout {
         width: 100%; /* Full width for small screens */
+        margin: 10px auto;
         margin-bottom: 20px; /* Space between stacked workout cards */
+        width: calc(100% - 30px);
     }
 
     .workout img {
         width: 100%; /* Full width images on small screens */
     }
+    
+    h1 {
+        text-align: center;
+        font-size: 24px;
+        padding-right: 40px;
+    }
 
-    h1, h2, h3 {
+     h2, h3 {
         font-size: 24px; /* Adjust heading sizes for readability */
     }
 }
